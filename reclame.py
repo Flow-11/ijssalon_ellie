@@ -1,3 +1,5 @@
+from aanbieding import mijn_functie2
+
 #Vraag 5
 def aanbieding_1(smaak,prijs,korting):
     korting = prijs * korting
@@ -52,7 +54,8 @@ meervoudig(lijst_11)
 def combinatie(invoer_lijst2):
        
     korte_lijst =  meervoudig(invoer_lijst2)
+    waarde = mijn_functie2(korte_lijst)   # deze functie heeft 2 getallen nodig.
 
-    return print("korte lijst: ",korte_lijst)
+    return print("korte lijst: ",waarde)
 
 combinatie(lijst_11)
