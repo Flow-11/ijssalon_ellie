@@ -1,11 +1,12 @@
-from aanbieding import mijn_functie2
+from tijdelijk import print_aanbieding
+from algemene_functies import mijn_functie2
 
 #Vraag 5
 def aanbieding_1(smaak,prijs,korting):
-    korting = prijs * korting
+    korting = prijs * (1 -korting)
     tekst = f"vandaag in de aanbieding: emmertje ijs (1 lister) in de smaak {smaak} van {prijs} euro voor {korting} euro"
     return tekst
-print(aanbieding_1("aardbei",4,0.8))
+print(aanbieding_1("aardbei",4,0.2))
 
 # vraag 6 / 7
 def inkomsten_totaal(inkomsten, btw):
@@ -22,11 +23,13 @@ print(inkomsten_totaal(list,0.8))
 #vraag 8
 mijn_lijst = [6,8,9,5,3,2,3]
 def laag_hoog(mijn_lijst):
-    hoog = max(mijn_lijst)
-    laag = min(mijn_lijst)
-    antwoord = f"hoogste: {hoog} laagste : {laag}"
-    return antwoord
-print(laag_hoog(mijn_lijst))
+    uitvoer = []
+    laagste = min(mijn_lijst)
+    hoogste = max(mijn_lijst)
+    uitvoer.append(laagste)
+    uitvoer.append(hoogste)
+    return uitvoer
+print("vraag 8: ",laag_hoog(mijn_lijst))
 
 #vraag9 /10
 def gemiddelde(mijn_lijst):
@@ -40,8 +43,11 @@ def meervoudig(invoer_lijst) :
     i = 0
     list_hoog = []
     list_laag = []
+    
     for x in invoer_lijst:
-        if x > 4 :
+        gemiddelde = 4
+        gemiddelde = sum(invoer_lijst) / len(invoer_lijst)
+        if x > gemiddelde :
             list_hoog.insert(i,x)
             i+1
         else :
@@ -51,6 +57,7 @@ def meervoudig(invoer_lijst) :
 
 meervoudig(lijst_11)
 
+#vraag 12
 def combinatie(invoer_lijst2):
        
     korte_lijst =  meervoudig(invoer_lijst2)
