@@ -37,7 +37,7 @@ def gemiddelde(mijn_lijst):
     return f"De gemiddelde inkomsten deze week zijn {round(bedrag,2)} euro" 
 print(gemiddelde(mijn_lijst))
 
-lijst_11 = [10,5,3,2,1,2,9]
+lijst_11 = [10,5,3,12,4,2,9,2]
 #vraag 11
 def meervoudig(invoer_lijst) :
     i = 0
@@ -53,7 +53,7 @@ def meervoudig(invoer_lijst) :
         else :
             list_laag.insert(i,x)
             i+1
-    return list_hoog,list_laag
+    return max(list_hoog),min(list_laag)
 
 meervoudig(lijst_11)
 
@@ -61,8 +61,8 @@ meervoudig(lijst_11)
 def combinatie(invoer_lijst2):
        
     korte_lijst =  meervoudig(invoer_lijst2)
-    waarde = mijn_functie2(korte_lijst)   # deze functie heeft 2 getallen nodig.
+    waarde = mijn_functie2(korte_lijst[0],korte_lijst[1])   # mijn_functie2 heeft 2 getallen nodig.
 
-    return print("korte lijst: ",waarde)
+    return print("kortelijst 0 ",korte_lijst[0],"kortelijst 0 ",korte_lijst[1],"korte lijst: ",waarde)
 
 combinatie(lijst_11)

@@ -10,7 +10,7 @@ def print_aanbieding():
     aanbieding = prijzen["aardbei"] * 0.8
     print(aanbieding)
 
-    reclame_tekst = f"Vandaag in de aanbieding: aardbei-ijs, 1 liter – slechts € {aanbieding}"
+    reclame_tekst = f"Vandaag in de aanbieding: aardbei-ijs, 1 liter – slechts € {round(aanbieding,2)}"
 
     lente_tekst = len(reclame_tekst) + 3
     reclame_tekst2 = reclame_tekst[:lente_tekst]
